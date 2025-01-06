@@ -1,7 +1,7 @@
-local monitor = peripheral.find("monitor")[1] --- @type ccTweaked.peripherals.Monitor
-local controller = peripheral.find("minecraft:tconstruct_smeltery_controller")[1]
-local integrator = peripheral.find("redstone_integrator")[1]
-local casters = peripheral.find("minecraft:tconstruct_casting_table")
+local monitor = peripheral.find("monitor") --- @type ccTweaked.peripherals.Monitor
+local controller = peripheral.find("minecraft:tconstruct_smeltery_controller")
+local integrator = peripheral.find("redstone_integrator")
+local casters = { peripheral.find("minecraft:tconstruct_casting_table") }
 
 function draw()
     monitor.clear()
