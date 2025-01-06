@@ -1,3 +1,5 @@
+## please do not use this yet, this is a work in progress
+
 # cc-smeltery
 
 **WARNING:** this program requires plethora to be installed and will most likely only work on versions that plethora supports. i might rewrite the program to support later versions.
