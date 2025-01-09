@@ -28,10 +28,6 @@ function loop()
     timer = os.startTimer(1)
 end
 
-local thread = coroutine.create(function()
-    timer = os.startTimer(1)
+timer = os.startTimer(1)
 
-    while true do loop() end
-end)
-
-coroutine.resume(thread)
+while true do loop() end
