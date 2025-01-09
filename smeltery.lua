@@ -16,7 +16,22 @@ function draw()
     ))
 end
 
-while true do
-    draw()
-    sleep(1)
+local timer
+function loop()
+    local data = { os.pullEvent() }
+    local event = data[1]
+
+    if event == "timer" and data[2] == timer then
+        draw()
+    end
+
+    timer = os.startTimer(1)
 end
+
+local thread = coroutine.create(function()
+    timer = os.startTimer(1)
+
+    while true do loop() end
+end)
+
+coroutine.resume(thread)
